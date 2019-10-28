@@ -1,0 +1,22 @@
+{
+    "Запчасти даром":{
+      "nomenclature": 1,
+      "brand": 2,
+      "article": 3,
+      "description": 4,
+      "weight": 5,
+      "multiplicity": 6,
+      "price": 7,
+      "basePrice": 8,
+      "presence" : 9,
+      "deliveryTime": 10,
+      "catalogueNumber": 11,
+      "OEM": 12,
+      "applicability": 13,
+      "VendorCode": 14
+    },
+
+  "email": {
+
+  }
+}
