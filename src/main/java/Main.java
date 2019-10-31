@@ -16,7 +16,7 @@ import java.util.Properties;
 
 public class Main {
         public static void main(String args[]) throws MessagingException, IOException, SQLException, ClassNotFoundException, ParseException {
-            receiveMessage();
+           // receiveMessage();
 
             CSVDriver csv = new CSVDriver();
             String vendor = "Запчасти даром";

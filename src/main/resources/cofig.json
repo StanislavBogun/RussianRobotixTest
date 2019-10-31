@@ -1,26 +1,26 @@
 {
     "Запчасти даром":{
-      "nomenclature": 1,
-      "brand": 2,
-      "article": 3,
-      "description": 4,
-      "weight": 5,
-      "multiplicity": 6,
-      "price": 7,
-      "basePrice": 8,
-      "presence" : 9,
-      "deliveryTime": 10,
-      "catalogueNumber": 11,
-      "OEM": 12,
-      "applicability": 13,
-      "VendorCode": 14
+      "nomenclature": 0,
+      "brand": 1,
+      "article": 2,
+      "description": 3,
+      "weight": 4,
+      "multiplicity": 5,
+      "price": 6,
+      "basePrice": 7,
+      "presence" : 8,
+      "deliveryTime": 9,
+      "catalogueNumber": 10,
+      "OEM": 11,
+      "applicability": 12,
+      "vendorCode": 13
     },
 
   "email": {
    "mail.imap.auth": "true",
    "mail.imap.socketFactory.port": "993",
    "host": "imap.yandex.ru",
-   "login": "",
-   "password": ""
+   "login": "bogunstas@yandex.ru",
+   "password": "stasbb95"
   }
 }

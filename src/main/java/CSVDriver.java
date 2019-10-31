@@ -17,21 +17,23 @@ class CSVDriver {
         ArrayList<Report> reportList = new ArrayList<>();
         allRows.forEach(it -> {
             Report r = new Report();
-            r.setApplicability(it[(int)jsonCompanyMap.get("applicability")]);
-            r.setArticle(it[(int)jsonCompanyMap.get("article")]);
-            r.setBasePrice(it[(int)jsonCompanyMap.get("basePrice")]);
-            r.setBrand(it[(int)jsonCompanyMap.get("brand")]);
-            r.setCatalogueNumber(it[(int)jsonCompanyMap.get("catalogueNumber")]);
-            r.setDeliveryTime(it[(int)jsonCompanyMap.get("deliveryTime")]);
-            r.setDescription(it[(int)jsonCompanyMap.get("description")]);
-            r.setMultiplicity(it[(int)jsonCompanyMap.get("multiplicity")]);
-            r.setNomenclature(it[(int)jsonCompanyMap.get("nomenclature")]);
-            r.setOEM(it[(int)jsonCompanyMap.get("OEM")]);
-            r.setWeight(it[(int)jsonCompanyMap.get("weight")]);
-            r.setVendorCode(it[(int)jsonCompanyMap.get("vendorCode")]);
-            r.setPresence(it[(int)jsonCompanyMap.get("presence")]);
-            r.setPrice(it[(int)jsonCompanyMap.get("price")]);
-            reportList.add(r);
+                r.setApplicability(it[Integer.parseInt((jsonCompanyMap.get("applicability").toString()))]);
+                r.setArticle(it[Integer.parseInt(jsonCompanyMap.get("article").toString())]);
+                r.setBasePrice(it[Integer.parseInt(jsonCompanyMap.get("basePrice").toString())]);
+                r.setBrand(it[Integer.parseInt(jsonCompanyMap.get("brand").toString())]);
+                r.setCatalogueNumber(it[Integer.parseInt(jsonCompanyMap.get("catalogueNumber").toString())]);
+                r.setDeliveryTime(it[Integer.parseInt(jsonCompanyMap.get("deliveryTime").toString())]);
+                r.setDescription(it[Integer.parseInt(jsonCompanyMap.get("description").toString())]);
+                r.setMultiplicity(it[Integer.parseInt(jsonCompanyMap.get("multiplicity").toString())]);
+                r.setNomenclature(it[Integer.parseInt(jsonCompanyMap.get("nomenclature").toString())]);
+                r.setOEM(it[Integer.parseInt(jsonCompanyMap.get("OEM").toString())]);
+                r.setWeight(it[Integer.parseInt(jsonCompanyMap.get("weight").toString())]);
+                System.out.println(jsonCompanyMap.get("vendorCode").toString());
+                r.setVendorCode(it[Integer.parseInt(jsonCompanyMap.get("vendorCode").toString())]);
+                r.setPresence(it[Integer.parseInt(jsonCompanyMap.get("presence").toString())]);
+                r.setPrice(it[Integer.parseInt(jsonCompanyMap.get("price").toString())]);
+
+                reportList.add(r);
         });
         return reportList;
     }

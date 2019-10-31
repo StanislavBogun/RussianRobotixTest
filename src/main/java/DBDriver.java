@@ -25,9 +25,16 @@ class DBDriver{
         Statement statmt = this.conn.createStatement();
         Report.forEach(it -> {
             try {
-                statmt.execute("INSERT INTO 'PriceItems ' ('Vendor', 'Number','SearchVendor','SearchNumber','Description','Price','Count')" +
-                        " VALUES ("+ it.getVendorCode() +", " + it.getCatalogueNumber() + ","+ vendor + ", "+ it.getCatalogueNumber() +"," + it.getDescription() +
-                        ", "+ it.getPrice() +", "+ it.getApplicability() +" ); "
+                String s= "'"+vendor+"'";
+                String vendorCode = "'" + it.getVendorCode() + "'";
+                String CatalogueNumber =  "'" + it.getCatalogueNumber() + "'";
+                String Description = "'" + it.getDescription()+ "'";
+                String Price = "'" +  it.getPrice() + "'";
+                String Applicability = "'" +  it.getApplicability() + "'";
+
+                statmt.execute("INSERT INTO 'PriceItems' ('Vendor', 'Number','SearchVendor','SearchNumber','Description','Price','Count')" +
+                        " VALUES ("+ vendorCode +", " + CatalogueNumber + ","+ s + ", "+CatalogueNumber+"," +Description +
+                        ", "+ Price +", "+ Applicability +" ); "
                 );
             } catch (SQLException e) {
                 e.printStackTrace();
